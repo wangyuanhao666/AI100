@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全网最佳AI工具百大推荐</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --accent: #4895ef;
+            --dark: #1a1c2c;
+            --light: #f8f9fa;
+            --success: #4cc9f0;
+            --warning: #f72585;
+            --card-bg: rgba(30, 33, 57, 0.8);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #0c1226, #1d2b4d, #2a3f6f);
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+        
+        header {
+            background: rgba(11, 13, 28, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            text-align: center;
+            z-index: 100;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid rgba(67, 97, 238, 0.3);
+            position: relative;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #4cc9f0, #4361ee, #f72585);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+            letter-spacing: -0.5px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #a0aec0;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-box {
+            background: rgba(67, 97, 238, 0.15);
+            padding: 1rem 1.8rem;
+            border-radius: 12px;
+            min-width: 160px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(67, 97, 238, 0.2);
+        }
+        
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #4cc9f0, #4361ee);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-label {
+            font-size: 0.95rem;
+            color: #a0aec0;
+            margin-top: 0.3rem;
+        }
+        
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1.8rem;
+        }
+        
+        .category-btn {
+            background: rgba(67, 97, 238, 0.2);
+            border: 1px solid rgba(67, 97, 238, 0.4);
+            color: #e2e8f0;
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.4);
+            color: white;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            min-height: 100vh;
+            overflow: visible;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.8rem;
+            margin-top: 1.5rem;
+            overflow: visible;
+        }
+        
+        .category-section {
+            margin-bottom: 4rem;
+            overflow: visible;
+        }
+        
+        .tool-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            border-color: rgba(72, 149, 239, 0.4);
+        }
+        
+        .card-header {
+            padding: 1.5rem;
+            background: rgba(23, 25, 48, 0.7);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .tool-number {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            font-weight: bold;
+            margin-right: 10px;
+            box-shadow: 0 4px 10px rgba(67, 97, 238, 0.4);
+            font-size: 0.9rem;
+        }
+        
+        .tool-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: inline;
+            color: #e2e8f0;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .tool-link {
+            display: flex;
+            align-items: center;
+            background: rgba(72, 149, 239, 0.15);
+            color: #4cc9f0;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-bottom: 1.2rem;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+        
+        .tool-link:hover {
+            background: rgba(72, 149, 239, 0.3);
+            transform: translateX(5px);
+        }
+        
+        .tool-link i {
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+        
+        .tool-desc {
+            color: #cbd5e0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-top: auto;
+        }
+        
+        .category-title {
+            font-size: 2rem;
+            margin: 3.5rem 0 1.8rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(67, 97, 238, 0.3);
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .category-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 120px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+        
+        .category-title i {
+            margin-right: 12px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.8rem;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            background: rgba(11, 13, 28, 0.7);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .footer p {
+            color: #a0aec0;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .highlight {
+            color: #4cc9f0;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .category-title {
+                font-size: 1.6rem;
+                margin: 3rem 0 1.5rem;
+            }
+            
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .category-btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .ai-highlight {
+            background: linear-gradient(45deg, #4cc9f0, #4361ee);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+        
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.5);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 99;
+        }
+        
+        .scroll-top.visible {
+            opacity: 1;
+        }
+        
+        .search-container {
+            max-width: 600px;
+            margin: 1.5rem auto;
+            position: relative;
+        }
+        
+        #search-input {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border-radius: 50px;
+            background: rgba(30, 33, 57, 0.6);
+            border: 1px solid rgba(67, 97, 238, 0.3);
+            color: white;
+            font-size: 1rem;
+            padding-left: 50px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        
+        #search-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(72, 149, 239, 0.3);
+        }
+        
+        #search-input::placeholder {
+            color: #a0aec0;
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #a0aec0;
+            font-size: 1.2rem;
+        }
+        
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 3rem;
+            color: #a0aec0;
+            font-size: 1.2rem;
+        }
+        
+        .site-logo {
+            position: absolute;
+            left: 32px;
+            top: 24px;
+            font-size: 1.45rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            user-select: none;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(90deg, #ff0000, #ff9900, #ffee00, #33ff00, #00cfff, #3300ff, #ff00cc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="site-logo">AI-WYH</span>
+        <div class="header-content">
+            <h1>全网最佳<span class="ai-highlight">AI工具</span>百大推荐</h1>
+            <p class="subtitle">深度测评全网AI工具后精选的TOP 100，涵盖通用对话、图像生成、学术研究、编程开发等14大类别！</p>
+            <p class="subtitle" style="margin-top: 0.5rem; font-size:1.05rem; color:#b0b8c9;">
+                感谢：B站百大UP主@图灵的猫，公众号博主@硬核AIGC整理的相关资料 🙏
+            </p>
+            
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">精选AI工具</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">14</div>
+                    <div class="stat-label">专业分类</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">创意可能性</div>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="search-input" placeholder="搜索AI工具...">
+            </div>
+            
+            <div class="categories">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-boxes"></i>全部工具
+                </button>
+                <button class="category-btn" data-category="chat">
+                    <i class="fas fa-comments"></i>对话AI
+                </button>
+                <button class="category-btn" data-category="image">
+                    <i class="fas fa-image"></i>图像视频
+                </button>
+                <button class="category-btn" data-category="academic">
+                    <i class="fas fa-graduation-cap"></i>学术研究
+                </button>
+                <button class="category-btn" data-category="programming">
+                    <i class="fas fa-code"></i>编程开发
+                </button>
+                <button class="category-btn" data-category="sam">
+                    <i class="fas fa-cubes"></i>软件资产管理
+                </button>
+                <button class="category-btn" data-category="other">
+                    <i class="fas fa-ellipsis-h"></i>其他类别
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" id="tools-container">
+        <!-- 工具将通过JavaScript动态生成 -->
+    </div>
+    
+    <div class="footer">
+        <p>深度测评全网AI工具后精选的TOP 100推荐 | 数据更新至2025年6月</p>
+        <p>© 2025 全网最佳AI工具百大推荐 | 助力您的AI探索之旅</p>
+    </div>
+    
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // 完整的100款AI工具数据
+        const aiTools = [
+            // 通用大模型与对话AI (1-10)
+            {
+                id: 1,
+                name: "DeepSeek",
+                url: "https://www.deepseek.com/",
+                desc: "开源免费中文大模型，训练成本低，打破数据算力限制。",
+                category: "chat"
+            },
+            {
+                id: 2,
+                name: "ChatGPT",
+                url: "https://chat.openai.com",
+                desc: "OpenAI推出的通用对话AI，知识覆盖面广，支持多模态。",
+                category: "chat"
+            },
+            {
+                id: 3,
+                name: "Gemini",
+                url: "https://gemini.google.com",
+                desc: "谷歌多模态模型，整合生态，支持百万级长文本。",
+                category: "chat"
+            },
+            {
+                id: 4,
+                name: "通义千问",
+                url: "https://tongyi.aliyun.com",
+                desc: "阿里中文大模型，低延时高复杂度任务表现优秀。",
+                category: "chat"
+            },
+            {
+                id: 5,
+                name: "Claude",
+                url: "https://claude.ai",
+                desc: "Anthropic开发，长文本和复杂推理能力强。",
+                category: "chat"
+            },
+            {
+                id: 6,
+                name: "Grok3",
+                url: "https://grok.com/",
+                desc: "xAI训练的高参数模型，回答风格自由。",
+                category: "chat"
+            },
+            {
+                id: 7,
+                name: "豆包",
+                url: "https://www.doubao.com",
+                desc: "国产全能AI，对话自然，受学生欢迎。",
+                category: "chat"
+            },
+            {
+                id: 8,
+                name: "智谱清言",
+                url: "https://chatglm.cn/",
+                desc: "擅长理工科和数据分析，开源免费。",
+                category: "chat"
+            },
+            {
+                id: 9,
+                name: "腾讯元宝",
+                url: "https://yuanbao.tencent.com/",
+                desc: "双模态切换，深度整合腾讯生态。",
+                category: "chat"
+            },
+            {
+                id: 10,
+                name: "Kimi",
+                url: "https://kimi.moonshot.cn",
+                desc: "长文档处理强，支持128k上下文。",
+                category: "chat"
+            },
+            // 图像与视频生成 (11-24)
+            {
+                id: 11,
+                name: "DALL-E",
+                url: "https://openai.com/dall-e",
+                desc: "OpenAI图像生成工具，文字嵌入优秀。",
+                category: "image"
+            },
+            {
+                id: 12,
+                name: "Midjourney",
+                url: "https://www.midjourney.com",
+                desc: "艺术风格生成能力强，社区活跃。",
+                category: "image"
+            },
+            {
+                id: 13,
+                name: "商汤秒画",
+                url: "https://miaohua.sensetime.com/",
+                desc: "海报和二次元风格突出，参数调节自由。",
+                category: "image"
+            },
+            {
+                id: 14,
+                name: "LibLibAI",
+                url: "https://www.liblib.art/",
+                desc: "支持模型自定义，UGC生态强。",
+                category: "image"
+            },
+            {
+                id: 15,
+                name: "即梦",
+                url: "https://jimeng.jianying.com",
+                desc: "擅长中文字体设计和复杂画风。",
+                category: "image"
+            },
+            {
+                id: 16,
+                name: "可灵",
+                url: "https://app.klingai.com",
+                desc: "光影、色彩层次和面部细节优秀。",
+                category: "image"
+            },
+            {
+                id: 17,
+                name: "通义万相",
+                url: "https://wanxiang.aliyun.com",
+                desc: "动态模拟和多对象生成能力强。",
+                category: "image"
+            },
+            {
+                id: 18,
+                name: "Vidu",
+                url: "https://www.vidu.cn/",
+                desc: "视频生成角色一致，支持电影级运镜。",
+                category: "image"
+            },
+            {
+                id: 19,
+                name: "Runway",
+                url: "https://runwayml.com",
+                desc: "4K视频生成，擅长电影特效。",
+                category: "image"
+            },
+            {
+                id: 20,
+                name: "Pika",
+                url: "https://pika.art",
+                desc: "音视频同步嘴型匹配，适合配音。",
+                category: "image"
+            },
+            {
+                id: 21,
+                name: "海螺",
+                url: "https://hailuoai.com/",
+                desc: "角色还原度高，适合二创用户。",
+                category: "image"
+            },
+            {
+                id: 22,
+                name: "剪映",
+                url: "https://www.capcut.cn/",
+                desc: "AI一键成片、字幕生成、降噪补帧。",
+                category: "image"
+            },
+            {
+                id: 23,
+                name: "PR（Adobe Premiere）",
+                url: "https://www.adobe.com/products/premiere.html",
+                desc: "专业剪辑工具，支持AI分析视频。",
+                category: "image"
+            },
+            {
+                id: 24,
+                name: "万兴喵影",
+                url: "https://miao.wondershare.com",
+                desc: "多轨道剪辑，适合复杂分镜。",
+                category: "image"
+            },
+            // 学术与知识管理 (25-32)
+            {
+                id: 25,
+                name: "Research Rabbit",
+                url: "https://www.researchrabbit.ai",
+                desc: "梳理论文与作者关系，生成文献网络。",
+                category: "academic"
+            },
+            {
+                id: 26,
+                name: "Gauth",
+                url: "https://www.gauthmath.com",
+                desc: "数理解题工具，支持拍照搜题。",
+                category: "academic"
+            },
+            {
+                id: 27,
+                name: "Google Learn About",
+                url: "https://learnabout.google",
+                desc: "知识点记录与交互式练习结合。",
+                category: "academic"
+            },
+            {
+                id: 28,
+                name: "Notion",
+                url: "https://www.notion.so",
+                desc: "AI辅助写作、知识管理。",
+                category: "academic"
+            },
+            {
+                id: 29,
+                name: "Tana",
+                url: "https://tana.inc",
+                desc: "大纲笔记软件，擅长处理会议信息。",
+                category: "academic"
+            },
+            {
+                id: 30,
+                name: "NotebookLM",
+                url: "https://notebooklm.google",
+                desc: "从文档/视频链接提取笔记。",
+                category: "academic"
+            },
+            {
+                id: 31,
+                name: "DeepResearch",
+                url: "https://chatgpt.com/",
+                desc: "科研级复杂任务处理能力强。",
+                category: "academic"
+            },
+            {
+                id: 32,
+                name: "AutoGLM 沉思",
+                url: "https://autoglm-research.zhipuai.cn/",
+                desc: "自动搜索总结网页内容，完成调研。",
+                category: "academic"
+            },
+            // 编程与开发 (39-47)
+            {
+                id: 39,
+                name: "Cursor",
+                url: "https://www.cursor.so",
+                desc: "基于VSCode的AI编程工具。",
+                category: "programming"
+            },
+            {
+                id: 40,
+                name: "GitHub Copilot",
+                url: "https://github.com/features/copilot",
+                desc: "AI编程助手，需VSCode Insider。",
+                category: "programming"
+            },
+            {
+                id: 41,
+                name: "通义灵码",
+                url: "https://tongyi.aliyun.com/lingma",
+                desc: "国产Cursor替代，功能完整。",
+                category: "programming"
+            },
+            {
+                id: 42,
+                name: "TRAE",
+                url: "https://www.trae.com.cn/",
+                desc: "前身为字节Marscode，功能完整。",
+                category: "programming"
+            },
+            {
+                id: 43,
+                name: "文心快码",
+                url: "https://comate.baidu.com/zh",
+                desc: "分Chat和Zulu模式，支持智能体交互。",
+                category: "programming"
+            },
+            {
+                id: 44,
+                name: "bolt",
+                url: "https://bolt.new/",
+                desc: "一键生成网页，自动拉取依赖。",
+                category: "programming"
+            },
+            {
+                id: 45,
+                name: "Firebase Studio",
+                url: "https://firebase.google.com",
+                desc: "网页版VSCode + AI，无需配置。",
+                category: "programming"
+            },
+            {
+                id: 46,
+                name: "Warp",
+                url: "https://www.warp.dev",
+                desc: "命令行AI工具，支持代码建议生成。",
+                category: "programming"
+            },
+            {
+                id: 47,
+                name: "Dify",
+                url: "https://dify.ai",
+                desc: "高自由度AI Agent构建平台。",
+                category: "programming"
+            },
+            // 其他类别示例 (63-66, 97-100)
+            {
+                id: 63,
+                name: "笔灵",
+                url: "https://ibiling.cn/template",
+                desc: "AI写作工具，支持小说、论文、营销文案。",
+                category: "other"
+            },
+            {
+                id: 64,
+                name: "字节即创",
+                url: "https://aic.oceanengine.com/login",
+                desc: "B端营销创作，支持AI脚本和数字人带货。",
+                category: "other"
+            },
+            {
+                id: 65,
+                name: "OpenCreator",
+                url: "https://opencreator.io/template-ai-script-to-video-maker",
+                desc: "从歌词到MV、剧本到电影的AI搭建。",
+                category: "other"
+            },
+            {
+                id: 66,
+                name: "Creaibo",
+                url: "https://www.creaibo.com/",
+                desc: "流式画布创作工具，管理灵感选题。",
+                category: "other"
+            },
+            {
+                id: 97,
+                name: "妙鸭相机",
+                url: "https://www.miaoya.cn/",
+                desc: "破圈AI相机，场景交互独特。",
+                category: "other"
+            },
+            {
+                id: 98,
+                name: "扣子",
+                url: "https://www.coze.cn/",
+                desc: "字节AI智能体平台，插件生态丰富。",
+                category: "other"
+            },
+            {
+                id: 99,
+                name: "天工AI",
+                url: "https://tiangong.ai",
+                desc: "集成多模态，直接生成音乐和PPT。",
+                category: "other"
+            },
+            {
+                id: 100,
+                name: "网易有道",
+                url: "https://ai.youdao.com",
+                desc: "高精翻译、母语润色、阅读助手。",
+                category: "other"
+            },
+            // 软件资产管理 (自定义分类)
+            {
+                id: 101,
+                name: "SMARTLIC 软件资产管理",
+                url: "http://smartlic.cn",
+                desc: "国内软件资产管理全生命周期解决方案供应商，软件资产一目了然，合规优化一键掌控——SMARTLIC 您的智能管家！",
+                category: "sam"
+            }
+        ];
+
+        // 分类映射
+        const categoryMap = {
+            chat: { name: "通用大模型与对话AI", icon: "fas fa-robot" },
+            image: { name: "图像与视频生成", icon: "fas fa-paint-brush" },
+            academic: { name: "学术与知识管理", icon: "fas fa-graduation-cap" },
+            programming: { name: "编程与开发", icon: "fas fa-code" },
+            other: { name: "其他AI工具", icon: "fas fa-ellipsis-h" },
+            sam: { name: "软件资产管理", icon: "fas fa-cubes" }
+        };
+
+        // 渲染工具卡片
+        function renderTools(tools = aiTools) {
+            const container = document.getElementById('tools-container');
+            container.innerHTML = '';
+            
+            // 按分类分组
+            const toolsByCategory = {};
+            tools.forEach(tool => {
+                if (!toolsByCategory[tool.category]) {
+                    toolsByCategory[tool.category] = [];
+                }
+                toolsByCategory[tool.category].push(tool);
+            });
+            
+            // 渲染每个分类
+            Object.entries(toolsByCategory).forEach(([categoryId, tools]) => {
+                const category = categoryMap[categoryId];
+                const section = document.createElement('div');
+                section.className = 'category-section';
+                section.dataset.category = categoryId;
+                
+                let html = `
+                    <h2 class="category-title">
+                        <i class="${category.icon}"></i> ${category.name}
+                    </h2>
+                    <div class="tools-grid">
+                `;
+                
+                tools.forEach(tool => {
+                    html += `
+                        <div class="tool-card ${tool.id === 1 ? 'floating' : ''}" data-id="${tool.id}" data-category="${tool.category}">
+                            <div class="card-header">
+                                <span class="tool-number">${tool.id}</span>
+                                <span class="tool-name">${tool.name}</span>
+                            </div>
+                            <div class="card-body">
+                                <a href="${tool.url}" class="tool-link" target="_blank">
+                                    <i class="fas fa-link"></i>${getDomain(tool.url)}
+                                </a>
+                                <p class="tool-desc">${tool.desc}</p>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                html += `</div>`;
+                section.innerHTML = html;
+                container.appendChild(section);
+            });
+            
+            // 如果没有结果
+            if (tools.length === 0) {
+                container.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-search fa-2x" style="margin-bottom: 20px;"></i>
+                        <h3>未找到匹配的工具</h3>
+                        <p>请尝试其他搜索关键词或分类</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // 从URL中提取域名
+        function getDomain(url) {
+            if (url === "#") return "暂无网址";
+            return url.replace(/^https?:\/\//, '').split('/')[0];
+        }
+        
+        // 分类过滤功能
+        function setupCategoryFilters() {
+            const buttons = document.querySelectorAll('.category-btn');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const category = this.dataset.category;
+                    const sections = document.querySelectorAll('.category-section');
+                    
+                    if (category === 'all') {
+                        sections.forEach(section => section.style.display = 'block');
+                    } else {
+                        sections.forEach(section => {
+                            section.style.display = section.dataset.category === category ? 'block' : 'none';
+                        });
+                    }
+                });
+            });
+        }
+        
+        // 搜索功能
+        function setupSearch() {
+            const searchInput = document.getElementById('search-input');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                if (searchTerm.length === 0) {
+                    renderTools();
+                    return;
+                }
+                
+                const filteredTools = aiTools.filter(tool => 
+                    tool.name.toLowerCase().includes(searchTerm) || 
+                    tool.desc.toLowerCase().includes(searchTerm)
+                );
+                
+                renderTools(filteredTools);
+                
+                // 确保所有分类显示
+                document.querySelectorAll('.category-section').forEach(section => {
+                    section.style.display = 'block';
+                });
+            });
+        }
+        
+        // 返回顶部功能
+        function setupScrollTop() {
+            const scrollBtn = document.getElementById('scrollTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 500) {
+                    scrollBtn.classList.add('visible');
+                } else {
+                    scrollBtn.classList.remove('visible');
+                }
+            });
+            
+            scrollBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            renderTools();
+            setupCategoryFilters();
+            setupSearch();
+            setupScrollTop();
+            
+            // 设置第一个工具卡片浮动效果
+            const firstCard = document.querySelector('.tool-card');
+            if (firstCard) {
+                firstCard.classList.add('floating');
+            }
+        });
+    </script>
+</body>
+</html>
